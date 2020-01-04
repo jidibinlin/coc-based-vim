@@ -30,6 +30,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'easymotion/vim-easymotion'
+Plug 'luochen1990/rainbow'
 
 " Initialize plugin system
 call plug#end()
@@ -45,6 +46,7 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#vista#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:rainbow_active = 1
 """ themes
     colorscheme space_vim_theme
     let g:airline_powerline_fonts = 1
