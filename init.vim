@@ -26,6 +26,10 @@ Plug 'honza/vim-snippets'
 Plug 'mhinz/vim-startify'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Yggdroot/indentLine'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+Plug 'easymotion/vim-easymotion'
 
 " Initialize plugin system
 call plug#end()
@@ -38,8 +42,13 @@ set nu
 set shortmess+=c
 set signcolumn=yes
 autocmd CursorHold * silent call CocActionAsync('highlight')
-colorscheme space_vim_theme
-let g:airline_powerline_fonts = 1
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#vista#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+""" themes
+    colorscheme space_vim_theme
+    let g:airline_powerline_fonts = 1
+    let g:airline_theme='violet'
 """""""let g:indentLine_setColors = 0
 set showmatch
 set smarttab
@@ -63,10 +72,10 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " explorer
-nmap ge :CocCommand explorer<CR>
+nmap <leader>fe :CocCommand explorer<CR>
 
 " vista
-nmap gv :Vista<CR>
+nmap <leader>tv :Vista<CR>
 
 " Clap
 
