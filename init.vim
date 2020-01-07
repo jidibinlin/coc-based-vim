@@ -31,6 +31,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'easymotion/vim-easymotion'
 Plug 'luochen1990/rainbow'
+Plug 'dracula/vim'
 
 " Initialize plugin system
 call plug#end()
@@ -48,7 +49,8 @@ let g:airline#extensions#vista#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:rainbow_active = 1
 """ themes
-    colorscheme space_vim_theme
+    "colorscheme space_vim_theme
+    colorscheme dracula
     let g:airline_powerline_fonts = 1
     let g:airline_theme='violet'
 """""""let g:indentLine_setColors = 0
