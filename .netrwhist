@@ -1,3 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =1
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/home/qibin/.quicklisp'
+let g:netrw_dirhist_7='/home/qibin/Downloads'
+let g:netrw_dirhist_6='/home/qibin/.config/dwmbar'
+let g:netrw_dirhist_5='/home/qibin/.config'
+let g:netrw_dirhist_4='/usr/share/dwmbar'
+let g:netrw_dirhist_3='/home/qibin/.config/autostart'
+let g:netrw_dirhist_2='/home/qibin/.config'
 let g:netrw_dirhist_1='/home/qibin/Downloads/dwm-config'

@@ -32,7 +32,7 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'easymotion/vim-easymotion'
 Plug 'luochen1990/rainbow'
 Plug 'dracula/vim'
-
+Plug 'l04m33/vlime', {'rtp': 'vim/'}
 " Initialize plugin system
 call plug#end()
 
@@ -48,6 +48,7 @@ let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#vista#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:rainbow_active = 1
+let maplocalleader = "\<Space>"
 """ themes
     "colorscheme space_vim_theme
     colorscheme dracula
@@ -60,6 +61,10 @@ set shiftwidth=4
 set tabstop=4
 set expandtab
 set termguicolors
+
+""" set Tranparency
+highlight Normal guibg=none
+highlight NonText guibg=none
 
 " Remap for format selected region
 xmap <leader>lf  <Plug>(coc-format-selected)
@@ -76,12 +81,13 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " explorer
-nmap <leader>fe :CocCommand explorer<CR>
+nmap <f2> :CocCommand explorer<CR>
 
 " vista
-nmap <leader>tv :Vista<CR>
+nmap <f3> :Vista<CR>
 
 " Clap
+nmap <leader>ff :Clap<CR>
 
 
 
