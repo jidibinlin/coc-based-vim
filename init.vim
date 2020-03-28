@@ -33,6 +33,8 @@ Plug 'easymotion/vim-easymotion'
 Plug 'luochen1990/rainbow'
 Plug 'dracula/vim'
 Plug 'l04m33/vlime', {'rtp': 'vim/'}
+Plug 'ianding1/leetcode.vim'
+Plug 'puremourning/vimspector'
 " Initialize plugin system
 call plug#end()
 
@@ -60,11 +62,11 @@ set smarttab
 set shiftwidth=4
 set tabstop=4
 set expandtab
-set termguicolors
+"set termguicolors
 
 """ set Tranparency
-highlight Normal guibg=none
-highlight NonText guibg=none
+"highlight Normal guibg=none
+"highlight NonText guibg=none
 
 " Remap for format selected region
 xmap <leader>lf  <Plug>(coc-format-selected)
@@ -84,7 +86,7 @@ nmap <silent> gr <Plug>(coc-references)
 nmap <f2> :CocCommand explorer<CR>
 
 " vista
-nmap <f3> :Vista<CR>
+nmap <leader>tg :Vista<CR>
 
 " Clap
 nmap <leader>ff :Clap<CR>
@@ -131,3 +133,12 @@ augroup end
 " Use <C-d> for select selections ranges, needs server support, like: coc-tsserver, coc-python
 nmap <silent> <C-d> <Plug>(coc-range-select)
 xmap <silent> <C-d> <Plug>(coc-range-select)
+
+
+"" LeetCode
+let g:leetcode_china = 1
+let g:leetcode_browser= "chrome"
+
+
+" vimSpector
+let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
