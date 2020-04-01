@@ -34,7 +34,9 @@ Plug 'luochen1990/rainbow'
 Plug 'dracula/vim'
 Plug 'l04m33/vlime', {'rtp': 'vim/'}
 Plug 'ianding1/leetcode.vim'
+Plug 'rafi/awesome-vim-colorschemes'
 Plug 'puremourning/vimspector'
+Plug 'jceb/vim-orgmode'
 " Initialize plugin system
 call plug#end()
 
@@ -53,16 +55,16 @@ let g:rainbow_active = 1
 let maplocalleader = "\<Space>"
 """ themes
     "colorscheme space_vim_theme
-    colorscheme dracula
+    colorscheme molokai
     let g:airline_powerline_fonts = 1
-    let g:airline_theme='violet'
+    let g:airline_theme='molokai'
 """""""let g:indentLine_setColors = 0
 set showmatch
 set smarttab
 set shiftwidth=4
 set tabstop=4
 set expandtab
-"set termguicolors
+set termguicolors
 
 """ set Tranparency
 "highlight Normal guibg=none
@@ -137,7 +139,7 @@ xmap <silent> <C-d> <Plug>(coc-range-select)
 
 "" LeetCode
 let g:leetcode_china = 1
-let g:leetcode_browser= "chrome"
+let g:leetcode_browser= 'chrome'
 
 
 " vimSpector
