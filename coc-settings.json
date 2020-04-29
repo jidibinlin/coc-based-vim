@@ -4,17 +4,21 @@
             "command": "ccls",
             "filetypes": [
                 "c",
+                "cu",
                 "cpp",
                 "objc",
                 "objcpp",
-                "cxx"
+                "cxx",
+                "hpp",
+                "h",
             ],
             "rootPatterns": [
                 ".ccls",
                 "compile_commands.json",
                 ".vim/",
                 ".git/",
-                ".hg/"
+                ".hg/",
+                "makefile"
             ],
             "initializationOptions": {
                 "cache": {
@@ -34,8 +38,8 @@
     "diagnostic.warningSign": "⚠",
     "diagnostic.infoSign": "ℹ",
     "diagnostic.hintSign": "➤",
-    "diagnostic.virtualText": true,
-    "diagnostic.virtualTextPrefix": "###  ",
+    "diagnostic.virtualText": false,
+    "highlight.colors.enable": true,
     "suggest.completionItemKindLabels": {
         "keyword": "\uf1de",
         "variable": "\ue79b",
@@ -63,5 +67,6 @@
         "typeParameter": "\uf728",
         "default": "\uf29c"
     },
-    "java.home": "/usr/java/jdk1.8.0_241-amd64"
+    "java.home": "/usr/lib/jvm/jdk-11.0.7",
+    "python.analysis.diagnosticEnabled": true
 }

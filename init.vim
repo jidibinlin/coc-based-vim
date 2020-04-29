@@ -20,8 +20,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'liuchengxu/vista.vim'
 Plug 'liuchengxu/vim-clap'
 Plug 'liuchengxu/space-vim-theme'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline'
 Plug 'honza/vim-snippets'
 Plug 'mhinz/vim-startify'
 Plug 'scrooloose/nerdcommenter'
@@ -30,13 +29,19 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'easymotion/vim-easymotion'
+Plug 'sickill/vim-monokai'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'luochen1990/rainbow'
 Plug 'dracula/vim'
 Plug 'l04m33/vlime', {'rtp': 'vim/'}
-Plug 'ianding1/leetcode.vim'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'puremourning/vimspector'
 Plug 'jceb/vim-orgmode'
+"Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+
+"Plug 'itchyny/lightline.vim'
+Plug 'liuchengxu/eleline.vim'
 " Initialize plugin system
 call plug#end()
 
@@ -44,20 +49,28 @@ call plug#end()
 
 
 "" common setting
-set nu
+set number relativenumber
 set shortmess+=c
 set signcolumn=yes
+set laststatus=2
+
+set guifont="DejaVuSansMono Nerd Font:h16"
+
+
 autocmd CursorHold * silent call CocActionAsync('highlight')
-let g:airline#extensions#whitespace#enabled = 0
-let g:airline#extensions#vista#enabled = 1
-let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#whitespace#enabled = 0
+"let g:airline#extensions#vista#enabled = 1
+"let g:airline#extensions#tabline#enabled = 1
 let g:rainbow_active = 1
 let maplocalleader = "\<Space>"
+
+
 """ themes
     "colorscheme space_vim_theme
     colorscheme molokai
-    let g:airline_powerline_fonts = 1
-    let g:airline_theme='molokai'
+"    let g:airline_powerline_fonts = 1
+    "let g:airline_theme='badwolf'
+"    let g:airline_theme='dracula'
 """""""let g:indentLine_setColors = 0
 set showmatch
 set smarttab
@@ -65,6 +78,7 @@ set shiftwidth=4
 set tabstop=4
 set expandtab
 set termguicolors
+
 
 """ set Tranparency
 "highlight Normal guibg=none
@@ -137,10 +151,17 @@ nmap <silent> <C-d> <Plug>(coc-range-select)
 xmap <silent> <C-d> <Plug>(coc-range-select)
 
 
-"" LeetCode
-let g:leetcode_china = 1
-let g:leetcode_browser= 'chrome'
-
-
 " vimSpector
 let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
+
+"eleline
+let g:eleline_powerline_fonts = 1
+
+
+""coc highlight
+hi CocCursorRange guibg=#b16286 guifg=#ebdbb2
+hi default CocHighlightText  guibg=#725972 ctermbg=96
+hi CocWarningSign  ctermfg=32 ctermbg=NONE guifg=#0087d7 guibg=NONE
+hi CocErrorSign  ctermfg=32 ctermbg=NONE guifg=#F92672 guibg=#3B3A32
+
+
